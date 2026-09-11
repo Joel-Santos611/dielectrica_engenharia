@@ -431,72 +431,303 @@ header {
     background-color: #8B1A1A; /* Cor de fundo ao passar o mouse */
 }
 
-/* Estilos para o banner */.banner {
-    background-image: url('../assets/img/linhas.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
+/* Estilos para o banner */
+/* =========================================
+   BANNER
+   ========================================= */
+
+.banner {
+    position: relative;
+
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
+
+    height: 550px;
+
+    background-image: url('../assets/img/equipe-dieletrica-bai.jpeg');
+
+    background-size: cover;
+
+    background-position: center;
+
     background-attachment: fixed;
 
-    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    color: #fff;
+
+    overflow: hidden;
 }
 
-/* Overlay */
+
+/* =========================================
+   OVERLAY
+   ========================================= */
+
 .banner::before {
     content: "";
+
     position: absolute;
+
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Conteúdo fica acima do overlay */
+
+/* =========================================
+   CONTEÚDO
+   ========================================= */
+
 .banner-content {
     position: relative;
+
     z-index: 1;
 
-    padding: 20px;
     width: 50%;
-    height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-width: 700px;
+
+    min-height: 100%;
+
+    padding: 20px;
 
     margin-left: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
 }
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
 .banner-text h1 {
     font-size: 4rem;
-    margin-bottom: 10px;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
 }
+
+
 .banner-text h2 {
     font-size: 1.2rem;
+
     line-height: 1.5;
-    padding:  15px 0;
+
+    font-weight: 400;
+
+    padding: 15px 0;
+
+    max-width: 650px;
 }
-.banner .banner-cta {
-    color: #fff;
-    background-color: #B91C1C;
-    padding: 10px 20px;
-    border-radius: 5px;
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.btn-cta-banner {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
     margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.banner-cta,
+.banner-cta2 {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 5px;
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =========================================
+   BOTÃO PRINCIPAL
+   ========================================= */
+
+.banner-cta {
+    color: #fff;
+
+    background-color: #B91C1C;
+
     border: 1px solid #fff;
 }
-.banner .banner-cta2 {
-    color: #fff;
-    background-color: #1A2B4C;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.banner .banner-cta:hover {
+
+
+.banner-cta:hover {
     background-color: #8B1A1A;
-    transition: 0.3s;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   BOTÃO SECUNDÁRIO
+   ========================================= */
+
+.banner-cta2 {
+    color: #fff;
+
+    background-color: #1A2B4C;
+
+    border: 1px solid #1A2B4C;
+}
+
+
+.banner-cta2:hover {
+    background-color: #101c32;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .banner {
+        height: 500px;
+
+        background-attachment: scroll;
+    }
+
+
+    .banner-content {
+        width: 65%;
+
+        margin-left: 30px;
+
+        padding: 20px;
+    }
+
+
+    .banner-text h1 {
+        font-size: 3.2rem;
+    }
+
+
+    .banner-text h2 {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .banner {
+
+        height: 600px;
+
+        background-attachment: scroll;
+
+        background-position: center;
+    }
+
+
+    .banner-content {
+
+        width: 100%;
+
+        max-width: none;
+
+        margin-left: 0;
+
+        padding: 30px 20px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .banner-text {
+
+        width: 100%;
+    }
+
+
+    .banner-text h1 {
+
+        font-size: 2.4rem;
+
+        line-height: 1.15;
+
+        margin-bottom: 15px;
+    }
+
+
+    .banner-text h2 {
+
+        font-size: 1rem;
+
+        line-height: 1.6;
+
+        padding: 10px 0;
+    }
+
+
+    /* ==============================
+       BOTÕES
+       ============================== */
+
+    .btn-cta-banner {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-top: 20px;
+    }
+
+
+    .banner-cta,
+    .banner-cta2 {
+
+        width: 100%;
+
+        max-width: 300px;
+
+        text-align: center;
+
+        padding: 13px 20px;
+    }
+
 }
 /* =========================================
    POR QUE ESCOLHER

@@ -1,0 +1,1408 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    width: 100%;
+
+    background-color: #fff;
+
+    position: relative;
+
+    z-index: 1000;
+}
+
+
+/* =========================================
+   MENU
+   ========================================= */
+
+.menu {
+
+    width: 100%;
+
+    min-height: 70px;
+
+    padding: 10px 5%;
+
+    background-color: #fff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.menu-logo {
+
+    width: 200px;
+
+    flex-shrink: 0;
+}
+
+
+.menu-logo a {
+
+    display: block;
+}
+
+
+.menu-logo a img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   NAVEGAÇÃO
+   ========================================= */
+
+.menu-nav nav ul {
+
+    display: flex;
+
+    align-items: center;
+
+    list-style: none;
+
+    gap: 10px;
+
+    padding: 10px;
+
+}
+
+
+.menu-nav nav ul li {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.menu-nav nav ul a {
+
+    color: #1A2B4C;
+
+    font-weight: 500;
+
+    font-size: 14px;
+
+    padding: 10px;
+
+    margin: 0 5px;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.menu-nav nav ul a:hover {
+
+    color: #B91C1C;
+
+}
+
+
+/* =========================================
+   BOTÃO CTA
+   ========================================= */
+
+.menu-nav nav ul a.btn-cta {
+
+    color: #fff;
+
+    background-color: #B91C1C;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    margin-left: 10px;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.menu-nav nav ul a.btn-cta:hover {
+
+    color: #fff;
+
+    background-color: #8B1A1A;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   BOTÃO HAMBÚRGUER
+   ========================================= */
+
+/* Esconde o checkbox */
+
+.menu-toggle {
+
+    display: none;
+
+}
+
+
+/* Ícone */
+
+.menu-icon {
+
+    display: none;
+
+    width: 35px;
+
+    height: 30px;
+
+    cursor: pointer;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+.menu-icon span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 3px;
+
+    background-color: #1A2B4C;
+
+    border-radius: 3px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .menu {
+
+        padding: 10px 4%;
+
+    }
+
+    .menu-logo {
+
+        width: 180px;
+
+    }
+
+    .menu-nav nav ul a {
+
+        font-size: 13px;
+
+        padding: 8px;
+
+        margin: 0 2px;
+
+    }
+
+    .menu-nav nav ul a.btn-cta {
+
+        padding: 9px 14px;
+
+        margin-left: 5px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .menu {
+
+        min-height: 65px;
+
+        padding: 10px 20px;
+
+    }
+
+
+    /* Logo */
+
+    .menu-logo {
+
+        width: 160px;
+
+    }
+
+
+    /* Mostra o botão */
+
+    .menu-icon {
+
+        display: flex;
+
+    }
+
+
+    /* Menu */
+
+    .menu-nav {
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 0;
+
+        width: 100%;
+
+        background-color: #fff;
+
+        border-top: 1px solid #eee;
+
+        box-shadow:
+            0 5px 15px rgba(0, 0, 0, 0.08);
+
+        /* Escondido inicialmente */
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        opacity: 0;
+
+        transition:
+            max-height 0.4s ease,
+            opacity 0.3s ease;
+
+    }
+
+
+    /* Lista */
+
+    .menu-nav nav ul {
+
+        width: 100%;
+
+        padding: 15px 20px 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 5px;
+
+    }
+
+
+    .menu-nav nav ul li {
+
+        width: 100%;
+
+    }
+
+
+    .menu-nav nav ul a {
+
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 10px;
+
+        margin: 0;
+
+        font-size: 15px;
+
+        text-align: left;
+
+    }
+
+
+    /* CTA */
+
+    .menu-nav nav ul a.btn-cta {
+
+        margin: 5px 0 0;
+
+        text-align: center;
+
+        padding: 12px 20px;
+
+    }
+
+
+    /* =====================================
+       ABRIR MENU
+       ===================================== */
+
+    .menu-toggle:checked ~ .menu-nav {
+
+        max-height: 500px;
+
+        opacity: 1;
+
+    }
+
+
+    /* =====================================
+       ANIMAÇÃO DO HAMBÚRGUER
+       ===================================== */
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+
+        transform: translateY(13.5px) rotate(45deg);
+
+    }
+
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+
+        opacity: 0;
+
+    }
+
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+
+        transform: translateY(-13.5px) rotate(-45deg);
+
+    }
+
+}
+
+/* Estilos para o botão de chamada para ação */
+.menu .menu-nav nav ul li a.btn-cta {
+    color: #fff;
+    transition: 0.3s;
+}
+.btn-cta {
+    background-color: #B91C1C; /* Cor de fundo */
+    color: #fffd; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+.btn-cta:hover {
+    background-color: #8B1A1A; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o banner */.banner {
+    background-image: url('../assets/img/linhas.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-attachment: fixed;
+
+    position: relative;
+}
+
+/* Overlay */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Conteúdo fica acima do overlay */
+.banner-content {
+    position: relative;
+    z-index: 1;
+
+    padding: 20px;
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 50px;
+}
+.banner-text h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+.banner-text h2 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    padding:  15px 0;
+}
+.banner .banner-cta {
+    color: #fff;
+    background-color: #B91C1C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #fff;
+}
+.banner .banner-cta2 {
+    color: #fff;
+    background-color: #1A2B4C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.banner .banner-cta:hover {
+    background-color: #8B1A1A;
+    transition: 0.3s;
+}
+/* =========================================
+   POR QUE ESCOLHER
+   ========================================= */
+
+.porque-escolher {
+
+    padding: 50px 0;
+
+    background-color: #f5f5f5;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.porque-escolher h2 {
+
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================================
+   CONTAINER DOS CARDS
+   ========================================= */
+
+.porque-escolher-card {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    width: 100%;
+
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.porque-escolher-card .card {
+
+    background-color: #fff;
+
+    margin: 10px;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    width: 260px;
+
+    min-height: 330px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border: 1px solid #ddd;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   IMAGEM DO CARD
+   ========================================= */
+
+.card-img {
+
+    width: 100%;
+
+    height: 190px;
+
+    overflow: hidden;
+
+}
+
+
+.card-img img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+
+}
+
+
+/* =========================================
+   CONTEÚDO
+   ========================================= */
+
+.card-conteudo {
+
+    padding: 20px;
+
+    text-align: left;
+
+    flex: 1;
+
+}
+
+
+.card-conteudo h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 1.15rem;
+
+    color: #003b8f;
+
+}
+
+
+.card-conteudo p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 0.9rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.porque-escolher-card .card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.porque-escolher-card .card:hover .card-img img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .porque-escolher-card {
+
+        gap: 15px;
+
+    }
+
+    .porque-escolher-card .card {
+
+        width: 300px;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .porque-escolher {
+
+        padding: 40px 15px;
+
+    }
+
+
+    .porque-escolher h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+
+    .porque-escolher-card {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+
+    }
+
+
+    .porque-escolher-card .card {
+
+        width: 100%;
+
+        max-width: 350px;
+
+        margin: 10px 0;
+
+    }
+
+
+    .card-img {
+
+        height: 200px;
+
+    }
+
+}
+
+.sobre {
+    width: 100%;
+
+    padding: 80px 8%;
+
+    background-color: #fff;
+}
+
+
+/* =========================================
+   CONTEÚDO SOBRE
+   ========================================= */
+
+.sobre-conteudo {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+.sobre-txt h3 {
+    font-size: 2.3rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    color: #222;
+}
+
+
+.sobre-txt p {
+    max-width: 600px;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #666;
+}
+
+
+/* =========================================
+   IMAGEM
+   ========================================= */
+
+.sobre-img {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.sobre-img img {
+    display: block;
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.sobre-img:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   SERVIÇOS
+   ========================================= */
+
+.sobre-servicos {
+    max-width: 1200px;
+
+    margin: 80px auto 0;
+}
+
+
+.sobre-servicos h2 {
+    text-align: center;
+
+    font-size: 2rem;
+
+    margin-bottom: 40px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   LISTA DE SERVIÇOS
+   ========================================= */
+
+.lista-servicos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   CARD
+   ========================================= */
+
+.servico {
+    padding: 30px 25px;
+
+    background-color: #f8f9fa;
+
+    border-radius: 8px;
+
+    border-top: 4px solid #007bff;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.servico:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.servico h3 {
+    font-size: 1.2rem;
+
+    margin-bottom: 12px;
+
+    color: #222;
+}
+
+
+.servico p {
+    margin: 0;
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .sobre {
+        padding: 60px 6%;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .sobre-img {
+        order: -1;
+    }
+
+    .sobre-img img {
+        height: 350px;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .sobre {
+        padding: 50px 20px;
+    }
+
+    .sobre-conteudo {
+        gap: 30px;
+    }
+
+    .sobre-txt h3 {
+        font-size: 1.8rem;
+    }
+
+    .sobre-txt p {
+        font-size: 1rem;
+    }
+
+    .sobre-img img {
+        height: 280px;
+    }
+
+    .sobre-servicos {
+        margin-top: 60px;
+    }
+
+    .sobre-servicos h2 {
+        font-size: 1.7rem;
+
+        margin-bottom: 30px;
+    }
+
+    .lista-servicos {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .servico {
+        padding: 25px 20px;
+    }
+
+}
+
+/* =========================================
+   SEÇÃO CLIENTES
+   ========================================= */
+
+.clientes {
+    width: 100%;
+    padding: 90px 8%;
+    background-color: #f8f9fa;
+}
+
+.clientes-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
+.clientes-titulo {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.clientes-titulo h2 {
+    margin: 0 0 15px;
+
+    font-size: 2.2rem;
+
+    color: #222;
+}
+
+.clientes-titulo p {
+    margin: 0;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =========================================
+   GRID
+   ========================================= */
+
+.grid-clientes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   CARD DO CLIENTE
+   ========================================= */
+
+.cliente {
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background-color: #fff;
+
+    border: 1px solid #eee;
+
+    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.cliente img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 150px;
+    max-height: 70px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.cliente:hover {
+    transform: translateY(-5px);
+
+    border-color: #ddd;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cliente:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .clientes {
+        padding: 70px 6%;
+    }
+
+    .grid-clientes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .clientes {
+        padding: 60px 20px;
+    }
+
+    .clientes-titulo {
+        margin-bottom: 35px;
+    }
+
+    .clientes-titulo h2 {
+        font-size: 1.8rem;
+    }
+
+    .clientes-titulo p {
+        font-size: 0.95rem;
+    }
+
+    .grid-clientes {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .cliente {
+        height: 100px;
+
+        padding: 15px;
+    }
+
+    .cliente img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+
+}
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    width: 100%;
+
+    background-color: #111827;
+
+    color: #fff;
+
+    padding-top: 60px;
+}
+
+
+/* =========================================
+   CONTAINER PRINCIPAL
+   ========================================= */
+
+.rodape-container {
+    width: 84%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.2fr;
+
+    gap: 50px;
+
+    padding-bottom: 50px;
+}
+
+
+/* =========================================
+   COLUNAS
+   ========================================= */
+
+.rodape-coluna h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 20px;
+
+    color: #fff;
+}
+
+.rodape-coluna h3 {
+    font-size: 1.1rem;
+
+    margin-bottom: 20px;
+
+    color: #fff;
+}
+
+.rodape-coluna p {
+    color: #cbd5e1;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+}
+
+
+/* =========================================
+   SOBRE A EMPRESA
+   ========================================= */
+
+.rodape-sobre p {
+    max-width: 320px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   LISTAS
+   ========================================= */
+
+.rodape-coluna ul {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+}
+
+.rodape-coluna li {
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+.rodape a {
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.rodape a:hover {
+    color: #fff;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   REDES SOCIAIS
+   ========================================= */
+
+.rodape-social {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.rodape-social a {
+    padding: 8px 12px;
+
+    border: 1px solid #374151;
+
+    border-radius: 5px;
+}
+
+.rodape-social a:hover {
+    padding-left: 12px;
+
+    border-color: #fff;
+}
+
+
+/* =========================================
+   CONTACTOS
+   ========================================= */
+
+.rodape-contactos p {
+    margin-bottom: 15px;
+}
+
+.rodape-contactos strong {
+    color: #fff;
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+   ========================================= */
+
+.rodape-bottom {
+    width: 100%;
+
+    border-top: 1px solid #374151;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+.rodape-bottom p {
+    margin: 0;
+
+    color: #94a3b8;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .rodape-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .rodape {
+        padding-top: 45px;
+    }
+
+    .rodape-container {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 40px;
+    }
+
+    .rodape-sobre p {
+        max-width: 100%;
+    }
+
+    .rodape-bottom {
+        padding: 20px 5%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 8px;
+    }
+
+}

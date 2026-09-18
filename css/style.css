@@ -605,6 +605,567 @@ header {
 
 
 /* =========================================
+   TAG DO BANNER
+   ========================================= */
+
+.banner-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================
+   BARRA DE CONFIANÇA
+   ========================================= */
+
+.confianca {
+    background-color: #1A2B4C;
+    color: #fff;
+    padding: 35px 8%;
+}
+
+.confianca-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.confianca-item strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.confianca-item span {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   SERVIÇOS (HOME)
+   ========================================= */
+
+.servicos-home {
+    padding: 90px 8%;
+    background-color: #fff;
+}
+
+.servicos-home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servicos-home-titulo {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.servicos-home-titulo h2 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.servicos-home-titulo p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.servicos-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.servico-home-card {
+    background-color: #f8f9fa;
+    padding: 40px 30px;
+    border-radius: 10px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.servico-home-card:hover {
+    background-color: #fff;
+    border-bottom-color: #B91C1C;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.servico-home-icon {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+}
+
+.servico-home-card h3 {
+    font-size: 1.25rem;
+    color: #1A2B4C;
+    margin-bottom: 12px;
+}
+
+.servico-home-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.servico-home-link {
+    color: #B91C1C;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: padding-left 0.3s ease;
+}
+
+.servico-home-link:hover {
+    padding-left: 5px;
+}
+
+
+/* =========================================
+   SOBRE (HOME)
+   ========================================= */
+
+.sobre-home {
+    padding: 90px 8%;
+    background-color: #f5f5f5;
+}
+
+.sobre-home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-home-img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.sobre-home-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.sobre-home-img:hover img {
+    transform: scale(1.04);
+}
+
+.sobre-home-txt h2 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.sobre-home-txt p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.sobre-home-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.sobre-home-lista li {
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #1A2B4C;
+    font-weight: 500;
+}
+
+.sobre-home-btn {
+    display: inline-block;
+    padding: 13px 28px;
+    background-color: #B91C1C;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sobre-home-btn:hover {
+    background-color: #8B1A1A;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TESTEMUNHOS
+   ========================================= */
+
+.testemunhos {
+    padding: 90px 8%;
+    background-color: #fff;
+}
+
+.testemunhos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testemunhos-titulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.testemunhos-titulo h2 {
+    font-size: 2.2rem;
+    color: #222;
+}
+
+.testemunhos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.testemunho {
+    background-color: #f8f9fa;
+    padding: 35px 30px;
+    border-radius: 10px;
+    border-left: 4px solid #B91C1C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testemunho:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.testemunho-texto {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.testemunho-texto::before {
+    content: '"';
+    font-size: 3rem;
+    color: #B91C1C;
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+    left: -8px;
+    font-family: Georgia, serif;
+}
+
+.testemunho-autor strong {
+    display: block;
+    color: #1A2B4C;
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+
+.testemunho-autor span {
+    font-size: 0.82rem;
+    color: #888;
+}
+
+
+/* =========================================
+   RESPONSIVO — TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .confianca-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .servicos-home {
+        padding: 70px 6%;
+    }
+
+    .servicos-home-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sobre-home {
+        padding: 70px 6%;
+    }
+
+    .sobre-home-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-home-img img {
+        height: 380px;
+    }
+
+    .testemunhos {
+        padding: 70px 6%;
+    }
+
+    .testemunhos-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVO — MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .banner-tag {
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+
+    .confianca {
+        padding: 35px 20px;
+    }
+
+    .confianca-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .confianca-item strong {
+        font-size: 1.4rem;
+    }
+
+    .servicos-home,
+    .sobre-home,
+    .testemunhos {
+        padding: 55px 20px;
+    }
+
+    .servicos-home-titulo h2,
+    .sobre-home-txt h2,
+    .testemunhos-titulo h2 {
+        font-size: 1.7rem;
+    }
+
+    .servico-home-card {
+        padding: 30px 22px;
+    }
+
+    .sobre-home-img img {
+        height: 280px;
+    }
+}
+
+/* =========================================
+   CONTACTO + CTA (SECÇÃO FUNDIDA)
+   ========================================= */
+
+.contacto-cta {
+    position: relative;
+    padding: 100px 8%;
+    background: linear-gradient(
+        135deg,
+        #B91C1C 0%,
+        #8B1A1A 100%
+    );
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Detalhe decorativo (mais subtil agora) */
+.contacto-cta::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.12) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.contacto-cta-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Etiqueta clara (sobre fundo vermelho) */
+.section-tag.claro {
+    color: #fecaca;
+}
+
+/* Texto esquerdo */
+.contacto-cta-info h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contacto-cta-info > p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #fee2e2;
+    margin-bottom: 35px;
+    max-width: 480px;
+}
+
+/* Lista de contactos */
+.contacto-cta-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contacto-cta-lista li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contacto-cta-lista li:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateX(5px);
+}
+
+.contacto-cta-lista li strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #fff;
+    font-weight: 600;
+    min-width: 130px;
+}
+
+.contacto-cta-lista li span {
+    color: #fee2e2;
+    font-size: 0.95rem;
+}
+
+
+/* Formulário (card branco sobre fundo vermelho) */
+.contacto-cta-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.contacto-cta-form .form-grupo label {
+    color: #1A2B4C;
+}
+
+.contacto-cta-form .form-grupo input,
+.contacto-cta-form .form-grupo textarea {
+    background-color: #f8f9fa;
+}
+
+.contacto-cta-form .form-btn {
+    background-color: #1A2B4C;
+}
+
+.contacto-cta-form .form-btn:hover {
+    background-color: #0f1c33;
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .contacto-cta {
+        padding: 75px 6%;
+    }
+
+    .contacto-cta-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .contacto-cta-info h2 {
+        font-size: 2rem;
+    }
+
+    .contacto-cta-info > p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .contacto-cta {
+        padding: 55px 20px;
+    }
+
+    .contacto-cta-info h2 {
+        font-size: 1.7rem;
+    }
+
+    .contacto-cta-lista li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 14px 16px;
+    }
+
+    .contacto-cta-lista li strong {
+        min-width: auto;
+    }
+
+    .contacto-cta-form {
+        padding: 28px 22px;
+    }
+}
+/* =========================================
    TABLET
    ========================================= */
 
@@ -1787,4 +2348,738 @@ header {
         gap: 8px;
     }
 
+}
+
+/* =========================================
+   MELHORIAS GLOBAIS
+   ========================================= */
+
+/* Header sticky com sombra */
+header {
+    position: sticky;
+    top: 0;
+    transition: box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Link ativo do menu */
+.menu-nav nav ul a.ativo {
+    color: #B91C1C;
+    position: relative;
+}
+
+.menu-nav nav ul a.ativo::after {
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: #B91C1C;
+    border-radius: 2px;
+}
+
+
+/* Animação reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.ativo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+
+/* Etiqueta de secção */
+.section-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #B91C1C;
+    margin-bottom: 12px;
+}
+
+
+/* Botão voltar ao topo */
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background-color: #B91C1C;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(185, 28, 28, 0.4);
+}
+
+.btn-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-topo:hover {
+    background-color: #8B1A1A;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   BANNER INTERNO (HERO SECUNDÁRIO)
+   ========================================= */
+
+.banner-interno {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background-image: url('../assets/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.banner-interno-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 43, 76, 0.85) 0%,
+        rgba(185, 28, 28, 0.6) 100%
+    );
+}
+
+.banner-interno-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.banner-interno-content h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.banner-interno-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+
+/* =========================================
+   HISTÓRIA
+   ========================================= */
+
+.sobre-historia {
+    padding: 90px 8%;
+    background-color: #fff;
+}
+
+.sobre-historia-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.sobre-historia-txt h2 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    color: #222;
+    margin-bottom: 22px;
+}
+
+.sobre-historia-txt p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.sobre-historia-txt strong {
+    color: #1A2B4C;
+}
+
+.sobre-historia-img {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.sobre-historia-img img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.sobre-historia-img:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   MISSÃO / VISÃO / VALORES
+   ========================================= */
+
+.mvv {
+    padding: 90px 8%;
+    background-color: #f5f5f5;
+}
+
+.mvv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mvv-titulo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.mvv-titulo h2 {
+    font-size: 2.2rem;
+    color: #222;
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #B91C1C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.mvv-icon {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+}
+
+.mvv-card h3 {
+    font-size: 1.3rem;
+    color: #1A2B4C;
+    margin-bottom: 14px;
+}
+
+.mvv-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* =========================================
+   NÚMEROS
+   ========================================= */
+
+.numeros {
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #1A2B4C 0%, #0f1c33 100%);
+    color: #fff;
+}
+
+.numeros-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.numero h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.numero p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   DIFERENCIAIS
+   ========================================= */
+
+.diferenciais {
+    padding: 90px 8%;
+    background-color: #fff;
+}
+
+.diferenciais-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.diferenciais-titulo {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.diferenciais-titulo h2 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.diferenciais-titulo p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.diferencial {
+    position: relative;
+    padding: 35px 30px 35px 100px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #B91C1C;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diferencial:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.diferencial-num {
+    position: absolute;
+    left: 30px;
+    top: 35px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #B91C1C;
+    opacity: 0.25;
+    line-height: 1;
+}
+
+.diferencial h3 {
+    font-size: 1.15rem;
+    color: #1A2B4C;
+    margin-bottom: 10px;
+}
+
+.diferencial p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+
+/* =========================================
+   EQUIPA
+   ========================================= */
+
+.equipa {
+    padding: 90px 8%;
+    background-color: #f5f5f5;
+}
+
+.equipa-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.equipa-titulo {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.equipa-titulo h2 {
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.equipa-titulo p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.equipa-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.membro {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membro:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.membro-img {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.membro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.membro:hover .membro-img img {
+    transform: scale(1.08);
+}
+
+.membro h3 {
+    font-size: 1.05rem;
+    color: #1A2B4C;
+    margin-bottom: 5px;
+}
+
+.membro span {
+    font-size: 0.85rem;
+    color: #B91C1C;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* =========================================
+   RESPONSIVO — TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .banner-interno {
+        height: 280px;
+    }
+
+    .banner-interno-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .sobre-historia {
+        padding: 70px 6%;
+    }
+
+    .sobre-historia-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-historia-img {
+        order: -1;
+    }
+
+    .sobre-historia-img img {
+        height: 380px;
+    }
+
+    .mvv,
+    .diferenciais,
+    .equipa
+    {
+        padding: 70px 6%;
+    }
+
+    .mvv-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .numeros-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .diferenciais-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .equipa-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+}
+
+
+/* =========================================
+   RESPONSIVO — MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .banner-interno {
+        height: 220px;
+    }
+
+    .banner-interno-content h1 {
+        font-size: 1.9rem;
+    }
+
+    .banner-interno-content p {
+        font-size: 0.95rem;
+    }
+
+    .sobre-historia {
+        padding: 50px 20px;
+    }
+
+    .sobre-historia-txt h2 {
+        font-size: 1.7rem;
+    }
+
+    .sobre-historia-img img {
+        height: 280px;
+    }
+
+    .mvv,
+    .diferenciais,
+    .equipa {
+        padding: 55px 20px;
+    }
+
+    .mvv-titulo h2,
+    .diferenciais-titulo h2,
+    .equipa-titulo h2 {
+        font-size: 1.7rem;
+    }
+
+    .mvv-card {
+        padding: 30px 22px;
+    }
+
+    .numeros {
+        padding: 50px 20px;
+    }
+
+    .numeros-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .numero h3 {
+        font-size: 2.4rem;
+    }
+
+    .diferencial {
+        padding: 28px 22px 28px 75px;
+    }
+
+    .diferencial-num {
+        left: 20px;
+        top: 28px;
+        font-size: 1.8rem;
+    }
+
+    .equipa-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .membro-img {
+        height: 300px;
+    }
+
+    .btn-topo {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+/* =========================================
+   CTA FINAL (página Sobre)
+   ========================================= */
+
+.cta-final {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #B91C1C 0%, #8B1A1A 100%);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhe decorativo */
+.cta-final::before {
+    content: "";
+    position: absolute;
+    top: -150px;
+    right: -150px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.12) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.cta-final-container {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.cta-final h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.cta-final p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    color: #fee2e2;
+    opacity: 0.95;
+}
+
+.cta-final-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cta-final-primario,
+.cta-final-secundario {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-final-primario {
+    background-color: #fff;
+    color: #B91C1C;
+}
+
+.cta-final-primario:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-3px);
+}
+
+.cta-final-secundario {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.cta-final-secundario:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   RESPONSIVO
+   ========================================= */
+
+@media (max-width: 900px) {
+    .cta-final {
+        padding: 70px 6%;
+    }
+
+    .cta-final h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cta-final {
+        padding: 55px 20px;
+    }
+
+    .cta-final h2 {
+        font-size: 1.7rem;
+    }
+
+    .cta-final-botoes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-final-primario,
+    .cta-final-secundario {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
 }
